@@ -1,0 +1,16 @@
+.drawer-empty{
+    background-image: linear-gradient(to right, #2D9EE0, #2F80ED, #091E3A) !important;
+    height: 100px !important;
+    
+}
+
+.drawer-div img{
+    width: 53px;
+    height: 63px;
+    margin-left: 50%;
+}
+
+.drawer-full{
+    background-image: linear-gradient(to right, #2D9EE0, #2F80ED, #091E3A) !important;
+    height: 85%;
+}

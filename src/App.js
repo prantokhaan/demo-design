@@ -1,23 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import Appbar from './Pages/Shared/Appbar/Appbar';
+import Drawer from './Pages/Shared/Drawer/Drawer';
+import AddUser from './Pages/Dashboard/AddUser/AddUser';
+import SetUp from './Pages/Company/SetUp/SetUp';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Company from './Pages/Company/Company/Company';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Appbar />
+        <Drawer />
+        <Switch>
+          <Route exact path="/">
+            <SetUp />
+          </Route>
+          <Route path="/company-setup">
+            <SetUp />
+          </Route>
+          <Route path="/add-user">
+            <AddUser />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
